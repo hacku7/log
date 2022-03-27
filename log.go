@@ -46,7 +46,7 @@ type InfoLogger interface {
 	Enabled() bool
 }
 
-// Logger represents the ability to log messages, both errors and not.
+// Logger represents the ability to log messages, both errors-base-sdk and not.
 type Logger interface {
 	// All Loggers implement InfoLogger.  Calling InfoLogger methods directly on
 	// a Logger value is equivalent to calling them on a V(0) InfoLogger.  For
@@ -55,7 +55,7 @@ type Logger interface {
 
 	// Error logs an error, with the given message and key/value pairs as context.
 	// It functions similarly to calling Info with the "error" named value, but may
-	// have unique behavior, and should be preferred for logging errors (see the
+	// have unique behavior, and should be preferred for logging errors-base-sdk (see the
 	// package documentations for more information).
 	//
 	// The msg field should be used to add context to any underlying error,
